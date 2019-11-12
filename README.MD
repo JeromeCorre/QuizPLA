@@ -47,12 +47,7 @@ Which of the following code snippet correctly set the value of a variable to 0x7
 
 || True | False|
 |-|:-:|:-:|
-| The directives **MACRO** and **MEND** are used to define a macro| [ ] []() | [ ] []() |
-
-
 | GBLA myVal 0x7F | [ ] []() | [ ] []() |
-
-
 | myVal SETA 0x7F | [ ] []() | [ ] []() |
 | myVal GBLL 0x7F | [ ] []() | [ ] []() |
 | SETS myVal 0x7F | [ ] []() | [ ] []() |
