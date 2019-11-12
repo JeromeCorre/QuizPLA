@@ -44,6 +44,7 @@ r2 =
 
 ## The **GBLA**, **GBLL**, **GBLS**, **SETA**, **SETL**, and **SETS** directives
 Which of the following code snippet correctly set the value of a variable to 0x7F?
+
 || True | False|
 |-|:-:|:-:|
 | The directives **MACRO** and **MEND** are used to define a macro| [ ] []() | [ ] []() |
