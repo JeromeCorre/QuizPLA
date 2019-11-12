@@ -13,26 +13,28 @@ And what about data2 and data3?
 ```
 Line 	Machine Code			       	    Address
 1 		AREA Example, CODE, READONLY				
-2 	start 	LDR r6, #10					    0x00
-3		    LDR r7, #0					    0x..
-4	data1 	DCB #32 					    0x..
-5		    ALIGN
-6		    MOV r0, r1 					    0x..
+2 	start	LDR r6, #10						0x00
+3			LDR r7, #0						0x..
+4	data1	DCB #32 						0x..
+5			ALIGN
+6			MOV r0, r1 						0x..
 7
 8		ORG 0x5000
-9	data2 	DCB #10 					    0x..
-10	data3 	DCB #2 						    0x..
+9	data2	DCB #10 						0x..
+10	data3	DCB #2 							0x..
 ```
 
 ## The **EQU** directive
 Given the following code : 
 
-```Y EQU 5```
-```X EQU 0x100```
-```Z EQU X + 10```
-&nbsp;&nbsp;&nbsp;&nbsp;```MOV r0,#Y```
-&nbsp;&nbsp;&nbsp;&nbsp;```MOV r1,#X```
-&nbsp;&nbsp;&nbsp;&nbsp;```MOV r2,#Z```
+```
+	Y EQU 5
+	X EQU 0x100
+	Z EQU X + 10
+		MOV r0,#Y
+		MOV r1,#X
+		MOV r2,#Z
+```
 
 What are the values stored in registers r0, r1 and r2 in hexadecimal? 
 r0 = 
@@ -43,10 +45,10 @@ r2 =
 Which of the following code snippet correctly set the value of a variable to 0x7F?
 || True | False|
 |:-------------------------------------------|:--------:|:--------:|
-|```GBLA myVal 0x7F```| [ ] []() | [ ] []() |
-|```myVal SETA 0x7F```| [ ] []() | [ ] []() |
-|```myVal GBLL 0x7F```| [ ] []() | [ ] []() |
-|```SETS myVal 0x7F```| [ ] []() | [ ] []() |
+|GBLA myVal 0x7F| [ ] []() | [ ] []() |
+|myVal SETA 0x7F| [ ] []() | [ ] []() |
+|myVal GBLL 0x7F| [ ] []() | [ ] []() |
+|SETS myVal 0x7F| [ ] []() | [ ] []() |
 
 ## The **Export**, **Global** and **Extern** directives
 No question on this topic yet!
