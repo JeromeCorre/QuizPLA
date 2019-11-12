@@ -11,13 +11,13 @@ Here is an example of an assembly code. Where is located the instruction of line
 And what about data2 and data3?
 
 ```
-Line 	Machine Code			       	    Address
-1 		AREA Example, CODE, READONLY				
-2 	start	LDR r6, #10						0x00
-3			LDR r7, #0						0x..
+Line	Machine Code						Address
+1		AREA Example, CODE, READONLY				
+2	start	LDR r6, #10						0x00
+3		LDR r7, #0						0x..
 4	data1	DCB #32 						0x..
-5			ALIGN
-6			MOV r0, r1 						0x..
+5		ALIGN
+6		MOV r0, r1 						0x..
 7
 8		ORG 0x5000
 9	data2	DCB #10 						0x..
@@ -28,9 +28,10 @@ Line 	Machine Code			       	    Address
 Given the following code : 
 
 ```
-	Y EQU 5
-	X EQU 0x100
-	Z EQU X + 10
+	Y	EQU 5
+	X	EQU 0x100
+	Z	EQU X + 10
+
 		MOV r0,#Y
 		MOV r1,#X
 		MOV r2,#Z
@@ -45,19 +46,21 @@ r2 =
 Which of the following code snippet correctly set the value of a variable to 0x7F?
 || True | False|
 |:-------------------------------------------|:--------:|:--------:|
-|GBLA myVal 0x7F| [ ] []() | [ ] []() |
-|myVal SETA 0x7F| [ ] []() | [ ] []() |
-|myVal GBLL 0x7F| [ ] []() | [ ] []() |
-|SETS myVal 0x7F| [ ] []() | [ ] []() |
+| GBLA myVal 0x7F | [ ] []() | [ ] []() |
+| myVal SETA 0x7F | [ ] []() | [ ] []() |
+| myVal GBLL 0x7F | [ ] []() | [ ] []() |
+| SETS myVal 0x7F | [ ] []() | [ ] []() |
 
 ## The **Export**, **Global** and **Extern** directives
 No question on this topic yet!
 
 ## The **DCB**, **DCW** and **DCD** directives
 Given the following assembly code, fill in the memory addresses and values
-&nbsp;&nbsp;&nbsp;&nbsp;```ORG 0x4000```
-```data1	DCD 1, 432, 0xAEFC8730```
-```data2	DCD data1 + 1950```
+```
+	ORG 0x4000
+	data1	DCD 1, 432, 0xAEFC8730
+	data2	DCD data1 + 1950
+```
 
 ![Memory stack](https://i.imgur.com/xlXSidT.jpg "Memory stack")
 
