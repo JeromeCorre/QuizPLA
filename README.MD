@@ -12,16 +12,16 @@ And what about data2 and data3?
 
 ```
 Line	Machine Code						Address
-1		AREA Example, CODE, READONLY				
-2	start	LDR r6, #10						0x00
-3		LDR r7, #0						0x..
-4	data1	DCB #32 						0x..
+1		AREA Example, CODE, READONLY
+2	start	LDR r6, #10					0x00
+3		LDR r7, #0					0x..
+4	data1	DCB #32 					0x..
 5		ALIGN
-6		MOV r0, r1 						0x..
+6		MOV r0, r1 					0x..
 7
 8		ORG 0x5000
-9	data2	DCB #10 						0x..
-10	data3	DCB #2 							0x..
+9	data2	DCB #10 					0x..
+10	data3	DCB #2 						0x..
 ```
 
 ## The **EQU** directive
